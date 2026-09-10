@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نطاق التغطية ومقر العمليات | CoolCare</title>
+
+    <link rel="stylesheet" href="assets/css/cairo-font.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .area-badge-card {
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .area-badge-card:hover {
+            border-color: var(--accent-cyan);
+            background-color: #f0f9ff;
+        }
+
+        .status-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 6px;
+            background-color: #22c55e;
+            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar text-white py-2 d-none d-md-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <i class="bi bi-geo-alt-fill text-warning me-1"></i>
+                <span>المركز الرئيسي: شارع بور سعيد، بجوار محطة قطار كفر شبرا زنجي، جروان، مركز الباجور</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <span><i class="bi bi-shield-fill-check text-success me-1"></i> ضمان 6 شهور معتمد</span>
+                <a href="tel:01112657449" class="text-white text-decoration-none"><i
+                        class="bi bi-headset text-info me-1"></i> 01112657449</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                <i class="bi bi-snow2 text-info fs-3"></i>
+                <span>Cool<span class="highlight">Care</span> <small class="fs-6 fw-normal text-light opacity-75">| كول
+                        كير</small></span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">خدماتنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">الأسعار والضمان</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="coverage.html">نطاق التغطية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="booking.html">حجز صيانة</a></li>
+                </ul>
+                <a href="tel:01153116317" class="btn btn-warning fw-bold btn-sm px-3 py-2 text-dark rounded-3">
+                    <i class="bi bi-telephone-outbound-fill me-1"></i> الإدارة
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+            <span class="badge bg-info-subtle text-info px-3 py-2 rounded-pill fw-bold mb-2">أين تجدنا وخطوط
+                تحركنا</span>
+            <h1 class="fw-bold display-6">المقر الرئيسي ونطاق الزيارات المنزلية والتجارية</h1>
+            <p class="text-muted mx-auto mb-0" style="max-width: 650px;">
+                سياراتنا الفنية مجهزة بالكامل بالعدد، أجهزة الفحص، وشحنات الفريون للتحرك السريع وخدمة العملاء في منازلهم
+                ومزارعهم ومحلاتهم.
+            </p>
+        </div>
+    </section>
+
+    <!-- Headquarters & Direct Hotlines -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+
+                <!-- بطاقة المقر الرئيسي -->
+                <div class="col-lg-6">
+                    <div class="custom-card p-4 p-md-5 h-100">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div class="icon-wrapper mb-0 text-danger bg-danger-subtle"><i
+                                    class="bi bi-geo-alt-fill"></i></div>
+                            <div>
+                                <h4 class="fw-bold mb-0">المقر الرئيسي للورشة</h4>
+                                <span class="text-muted small">مركز العمليات ونقطة الانطلاق الأساسية</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-light rounded-3 mb-4 border">
+                            <div class="fw-bold text-dark fs-5 mb-1">
+                                شارع بور سعيد، بجوار محطة قطار كفر شبرا زنجي
+                            </div>
+                            <div class="text-muted">
+                                قرية جروان - مركز الباجور - محافظة المنوفية.
+                            </div>
+                        </div>
+
+                        <h6 class="fw-bold text-dark mb-3"><i class="bi bi-clock-history text-primary me-2"></i>مواعيد
+                            العمل واستقبال البلاغات:</h6>
+                        <ul class="list-unstyled small text-muted mb-4">
+                            <li class="mb-2"><span class="status-indicator"></span> <strong>استقبال البلاغات والكول
+                                    سنتر:</strong> يومياً من الساعة 8:00 صباحاً حتى 11:00 مساءً.</li>
+                            <li class="mb-2"><span class="status-indicator"></span> <strong>تحرك الزيارات
+                                    المنزلية:</strong> من 9:00 صباحاً حتى 9:00 مساءً طوال أيام الأسبوع.</li>
+                            <li class="mb-0"><span class="status-indicator"></span> <strong>طوارئ تنكات الألبان وغرف
+                                    التبريد:</strong> متاح خط ساخن على مدار 24 ساعة للمزارع.</li>
+                        </ul>
+
+                        <div class="d-flex gap-2 flex-wrap">
+                            <a href="https://wa.me/201112657449?text=أرغب%20في%20معرفة%20موقع%20الورشة%20أو%20إرسال%20اللوكيشن"
+                                target="_blank" class="btn btn-outline-success fw-bold flex-grow-1">
+                                <i class="bi bi-whatsapp me-1"></i> طلب اللوكيشن على واتساب
+                            </a>
+                            <a href="booking.html" class="btn btn-primary fw-bold flex-grow-1">
+                                <i class="bi bi-calendar-check me-1"></i> طلب زيارة منزلية
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- بطاقة خطوط الاتصال السريع -->
+                <div class="col-lg-6">
+                    <div
+                        class="custom-card p-4 p-md-5 h-100 bg-primary text-white d-flex flex-column justify-content-between">
+                        <div>
+                            <h4 class="fw-bold text-white mb-2"><i class="bi bi-headset me-2"></i>قنوات التواصل المباشرة
+                            </h4>
+                            <p class="text-light opacity-75 small mb-4">تواصل مباشرة مع الشخص المسؤول لتسجيل شكوتك
+                                وتحديد الموعد فوراً.</p>
+
+                            <div class="d-flex flex-column gap-3">
+
+                                <!-- رقم 1: كول سنتر وواتساب -->
+                                <div
+                                    class="bg-white bg-opacity-10 p-3 rounded-3 d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <div class="small text-light opacity-75">الكول سنتر واستقبال الحجوزات:</div>
+                                        <div class="fs-5 fw-bold font-monospace">01112657449</div>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <a href="tel:01112657449" class="btn btn-warning btn-sm fw-bold text-dark"><i
+                                                class="bi bi-telephone-fill"></i> اتصال</a>
+                                        <a href="https://wa.me/201112657449" target="_blank"
+                                            class="btn btn-success btn-sm fw-bold"><i class="bi bi-whatsapp"></i></a>
+                                    </div>
+                                </div>
+
+                                <!-- رقم 2: المدير المسؤول -->
+                                <div
+                                    class="bg-white bg-opacity-10 p-3 rounded-3 d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <div class="small text-light opacity-75">إدارة الصيانة (المدير المسؤول):</div>
+                                        <div class="fs-5 fw-bold font-monospace">01153116317</div>
+                                    </div>
+                                    <a href="tel:01153116317" class="btn btn-warning btn-sm fw-bold text-dark"><i
+                                            class="bi bi-telephone-fill"></i> اتصال</a>
+                                </div>
+
+                                <!-- رقم 3: المتابعة والطوارئ -->
+                                <div
+                                    class="bg-white bg-opacity-10 p-3 rounded-3 d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <div class="small text-light opacity-75">إدارة المتابعة وعقود الشركات:</div>
+                                        <div class="fs-5 fw-bold font-monospace">01022377655</div>
+                                    </div>
+                                    <a href="tel:01022377655" class="btn btn-warning btn-sm fw-bold text-dark"><i
+                                            class="bi bi-telephone-fill"></i> اتصال</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div
+                            class="mt-4 pt-3 border-top border-white border-opacity-25 small text-light opacity-75 text-center">
+                            <i class="bi bi-info-circle me-1"></i> يتم تسجيل المكالمات والبيانات لضمان أعلى معايير
+                            الجودة والمتابعة بعد الصيانة.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Areas Grid -->
+    <section class="py-5 bg-white border-top">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold mb-2">تغطية
+                    واسعة</span>
+                <h2 class="fw-bold">المناطق والمدن المشمولة بالزيارات الفورية</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    فريقنا يتحرك يومياً وفق خطوط سير منتظمة لتغطية القرى والمراكز بدون تأخير.
+                </p>
+            </div>
+
+            <div class="row g-3">
+                <!-- منطقة 1: الباجور وقراها -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="area-badge-card h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-geo-alt text-primary fs-5"></i>
+                            <h6 class="fw-bold mb-0">مركز ومدينة الباجور</h6>
+                        </div>
+                        <p class="text-muted small mb-2">جروان، كفر شبرا زنجي، بهناي، سبك الضحاك، مشيرف، وكافة القرى
+                            المجاورة.</p>
+                        <span class="badge bg-success-subtle text-success">تغطية فورية (خلال ساعات)</span>
+                    </div>
+                </div>
+
+                <!-- منطقة 2: شبين الكوم -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="area-badge-card h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-geo-alt text-primary fs-5"></i>
+                            <h6 class="fw-bold mb-0">شبين الكوم والقرى</h6>
+                        </div>
+                        <p class="text-muted small mb-2">أحياء شبين الكوم، الماي، شنوان، البتانون، وكافة المناطق التابعة
+                            للمركز.</p>
+                        <span class="badge bg-primary-subtle text-primary">زيارات يومية منتظمة</span>
+                    </div>
+                </div>
+
+                <!-- منطقة 3: باقي مراكز المنوفية -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="area-badge-card h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-geo-alt text-primary fs-5"></i>
+                            <h6 class="fw-bold mb-0">مراكز محافظة المنوفية</h6>
+                        </div>
+                        <p class="text-muted small mb-2">منوف، أشمون، بركة السبع، قويسنا، وسرس الليان (منازل ومزارع).
+                        </p>
+                        <span class="badge bg-primary-subtle text-primary">تغطية شاملة خلال 24 ساعة</span>
+                    </div>
+                </div>
+
+                <!-- منطقة 4: القاهرة والجيزة -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="area-badge-card h-100">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-geo-alt text-primary fs-5"></i>
+                            <h6 class="fw-bold mb-0">القاهرة الكبرى وما حولها</h6>
+                        </div>
+                        <p class="text-muted small mb-2">مناطق القاهرة والجيزة، المنشآت التجارية، والشركات والمصانع
+                            التابعة.</p>
+                        <span class="badge bg-warning-subtle text-dark">حسب الموعد المسبق</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Actions -->
+    <div class="sticky-actions">
+        <a href="https://wa.me/201112657449" target="_blank" class="action-circle-btn btn-wa" title="راسلنا واتساب"><i
+                class="bi bi-whatsapp"></i></a>
+        <a href="tel:01112657449" class="action-circle-btn btn-ph" title="اتصل بنا"><i
+                class="bi bi-telephone-fill"></i></a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-5">
+                    <h5 class="fw-bold text-info mb-3"><i class="bi bi-snow2 me-2"></i>CoolCare | كول كير</h5>
+                    <p class="small text-light opacity-75">
+                        المركز الهندسي المعتمد لخدمات صيانة التكييف، التبريد، تنكات تبريد الألبان، والأجهزة المنزلية
+                        والتجارية بمحافظتي المنوفية والقاهرة وما حولهما.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">الصفحات</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="index.html"
+                                class="text-light opacity-75 text-decoration-none">الرئيسية</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-light opacity-75 text-decoration-none">كافة
+                                الخدمات</a></li>
+                        <li class="mb-2"><a href="pricing.html" class="text-light opacity-75 text-decoration-none">جدول
+                                الأسعار</a></li>
+                        <li class="mb-2"><a href="coverage.html" class="text-light opacity-75 text-decoration-none">نطاق
+                                التغطية</a></li>
+                        <li class="mb-2"><a href="booking.html" class="text-light opacity-75 text-decoration-none">حجز
+                                موعد</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="fw-bold mb-3">الاتصال السريع</h6>
+                    <p class="small text-light opacity-75 mb-1"><i class="bi bi-headset text-info me-2"></i> كول سنتر:
+                        01112657449</p>
+                    <p class="small text-light opacity-75 mb-1"><i class="bi bi-person-badge text-warning me-2"></i>
+                        الإدارة: 01153116317 / 01022377655</p>
+                    <p class="small text-light opacity-75 mb-0"><i class="bi bi-geo-alt text-danger me-2"></i> كفر شبرا
+                        زنجي، جروان، الباجور، المنوفية</p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center small text-light opacity-50">جميع الحقوق محفوظة &copy; 2026 - CoolCare.</div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

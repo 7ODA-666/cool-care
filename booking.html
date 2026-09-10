@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجز موعد صيانة ومعاينة | CoolCare</title>
+
+    <link rel="stylesheet" href="assets/css/cairo-font.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link rel="stylesheet" href="assets/css/select2-bootstrap-5-theme.rtl.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar text-white py-2 d-none d-md-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <i class="bi bi-geo-alt-fill text-warning me-1"></i>
+                <span>المركز الرئيسي: شارع بور سعيد، بجوار محطة قطار كفر شبرا زنجي، جروان، مركز الباجور</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <span><i class="bi bi-shield-fill-check text-success me-1"></i> ضمان 6 شهور معتمد</span>
+                <a href="tel:01112657449" class="text-white text-decoration-none"><i
+                        class="bi bi-headset text-info me-1"></i> 01112657449</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                <i class="bi bi-snow2 text-info fs-3"></i>
+                <span>Cool<span class="highlight">Care</span> <small class="fs-6 fw-normal text-light opacity-75">| كول
+                        كير</small></span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">خدماتنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">الأسعار والضمان</a></li>
+                    <li class="nav-item"><a class="nav-link" href="coverage.html">نطاق التغطية</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="booking.html">حجز صيانة</a></li>
+                </ul>
+                <a href="tel:01153116317" class="btn btn-warning fw-bold btn-sm px-3 py-2 text-dark rounded-3">
+                    <i class="bi bi-telephone-outbound-fill me-1"></i> الإدارة
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+            <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold mb-2">استجابة سريعة وتأكيد
+                فوري</span>
+            <h1 class="fw-bold display-6">طلب معاينة وزيارة فنية للأجهزة</h1>
+            <p class="text-muted mx-auto mb-0" style="max-width: 650px;">
+                سجل بيانات العطل وموقعك بدقة، وسيتم تجهيز بلاغ الصيانة وإرساله عبر الواتساب لتأكيد الموعد مع الفني
+                المختص.
+            </p>
+        </div>
+    </section>
+
+    <!-- Booking Form Container -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="custom-card p-4 p-md-5 border-0 shadow-sm">
+
+                        <div class="alert alert-info border-0 rounded-3 mb-4 d-flex align-items-center gap-3">
+                            <i class="bi bi-info-circle-fill fs-3 text-primary"></i>
+                            <div class="small">
+                                <strong>تذكير مهم:</strong> قيمة الكشف المبدئي تُخصم 100% من حسابك في حال إتمام عملية
+                                الإصلاح والصيانة مع الفني.
+                            </div>
+                        </div>
+
+                        <form id="serviceOrderForm">
+                            <div class="row g-3">
+
+                                <!-- اسم العميل -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small">اسم العميل الكريم <span
+                                            class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
+                                        <input type="text" id="cust_name" class="form-control form-control-lg"
+                                            placeholder="اكتب اسمك الثلاثي" required>
+                                    </div>
+                                </div>
+
+                                <!-- رقم الموبايل -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small">رقم الموبايل / الواتساب <span
+                                            class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light"><i class="bi bi-phone"></i></span>
+                                        <input type="tel" id="cust_phone" class="form-control form-control-lg"
+                                            placeholder="01xxxxxxxxx" required>
+                                    </div>
+                                </div>
+
+                                <!-- النطاق الجغرافي -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small">المحافظة / النطاق الجغرافي <span
+                                            class="text-danger">*</span></label>
+                                    <select id="cust_gov" class="form-select select2-init" style="width: 100%;">
+                                        <option value="المنوفية - الباجور وقراها">المنوفية - الباجور وقراها</option>
+                                        <option value="المنوفية - شبين الكوم">المنوفية - شبين الكوم</option>
+                                        <option value="المنوفية - منوف / أشمون / بركة السبع">المنوفية - منوف / أشمون /
+                                            بركة السبع</option>
+                                        <option value="المنوفية - مراكز وقرى أخرى">المنوفية - مراكز وقرى أخرى</option>
+                                        <option value="القاهرة والجيزة وما حولهما">القاهرة والجيزة وما حولهما</option>
+                                    </select>
+                                </div>
+
+                                <!-- نوع الجهاز -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small">نوع الجهاز المطلوب صيانته <span
+                                            class="text-danger">*</span></label>
+                                    <select id="cust_device" class="form-select select2-init" style="width: 100%;">
+                                        <optgroup label="المكيفات والتبريد">
+                                            <option value="تكييف سبليت منزلي">تكييف سبليت منزلي</option>
+                                            <option value="تكييف مركزي / كونسيلد / كاسيت">تكييف مركزي / كونسيلد / كاسيت
+                                            </option>
+                                            <option value="تكييف شباك">تكييف شباك</option>
+                                        </optgroup>
+                                        <optgroup label="تنكات وتبريد صناعي وتجاري">
+                                            <option value="تانك تبريد ألبان (مزرعة / تجميع)">تانك تبريد ألبان (مزرعة /
+                                                تجميع)</option>
+                                            <option value="غرفة تبريد أو تجميد">غرفة تبريد أو تجميد</option>
+                                            <option value="ثلاجة عرض سوبر ماركت">ثلاجة عرض سوبر ماركت</option>
+                                        </optgroup>
+                                        <optgroup label="أجهزة منزلية وتبريد مياه">
+                                            <option value="ثلاجة منزلية (نوفروست/عادية)">ثلاجة منزلية (نوفروست/عادية)
+                                            </option>
+                                            <option value="ديب فريزر (أفقي/رأسي)">ديب فريزر (أفقي/رأسي)</option>
+                                            <option value="ديسبنسر مبرد مياه أو كولدير">ديسبنسر مبرد مياه أو كولدير
+                                            </option>
+                                            <option value="غسالة ملابس أوتوماتيك/فوق أوتوماتيك">غسالة ملابس
+                                                أوتوماتيك/فوق أوتوماتيك</option>
+                                            <option value="غسالة أطباق">غسالة أطباق</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+
+                                <!-- طبيعة العطل أو الخدمة المطلوبة -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small">الخدمة أو المشكلة الظاهرة</label>
+                                    <select id="cust_issue" class="form-select select2-init" style="width: 100%;">
+                                        <option value="كشف وفحص عطل مفاجئ وتوقف تشغيل">كشف وفحص عطل مفاجئ وتوقف تشغيل
+                                        </option>
+                                        <option value="شحن فريون واختبار تسريب">شحن فريون واختبار تسريب</option>
+                                        <option value="غسيل وتنظيف عميق للتكييف">غسيل وتنظيف عميق للتكييف</option>
+                                        <option value="فك ونقل وإعادة تركيب تكييف">فك ونقل وإعادة تركيب تكييف</option>
+                                        <option value="الجهاز لا يجمد / تبريد ضعيف">الجهاز لا يجمد / تبريد ضعيف</option>
+                                        <option value="صوت عالي أو اهتزاز قوي">صوت عالي أو اهتزاز قوي</option>
+                                        <option value="تسريب مياه من الجهاز">تسريب مياه من الجهاز</option>
+                                        <option value="عقد صيانة ومجموعة أجهزة">عقد صيانة ومجموعة أجهزة (حرق سعر)
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <!-- العنوان بالتفصيل -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold small">العنوان التفصيلي <span
+                                            class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light"><i class="bi bi-geo-alt"></i></span>
+                                        <input type="text" id="cust_address" class="form-control form-control-lg"
+                                            placeholder="الشارع - القرية/المدينة - علامة مميزة" required>
+                                    </div>
+                                </div>
+
+                                <!-- ملاحظات إضافية -->
+                                <div class="col-12">
+                                    <label class="form-label fw-bold small">ملاحظات إضافية أو ماركة الجهاز
+                                        (اختياري)</label>
+                                    <textarea id="cust_notes" class="form-control" rows="3"
+                                        placeholder="مثال: تكييف شارب 2.25 حصان بارد ساخن، أو تانك لبن سعة 1.5 طن، أو أي تفاصيل تخص العطل..."></textarea>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold py-3 shadow">
+                                        <i class="bi bi-whatsapp me-2 text-success"></i> تأكيد الطلب وإرساله عبر
+                                        الواتساب فوراً
+                                    </button>
+                                    <div class="text-center mt-2 small text-muted">
+                                        <i class="bi bi-shield-check text-success me-1"></i> يتم الرد وتأكيد الموعد معك
+                                        هاتفياً أو عبر واتساب خلال دقائق من استلام الطلب.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Hotline Callout -->
+    <section class="py-4 bg-light border-top">
+        <div class="container text-center">
+            <div class="d-inline-flex align-items-center gap-3 bg-white p-3 px-4 rounded-4 shadow-sm border">
+                <i class="bi bi-telephone-inbound-fill fs-3 text-warning"></i>
+                <div class="text-start">
+                    <div class="small text-muted">لو مستعجل أو حالة طوارئ؟</div>
+                    <div class="fw-bold text-dark fs-5">اتصل مباشرة بالكول سنتر: <a href="tel:01112657449"
+                            class="text-primary text-decoration-none">01112657449</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Actions -->
+    <div class="sticky-actions">
+        <a href="https://wa.me/201112657449" target="_blank" class="action-circle-btn btn-wa" title="راسلنا واتساب"><i
+                class="bi bi-whatsapp"></i></a>
+        <a href="tel:01112657449" class="action-circle-btn btn-ph" title="اتصل بنا"><i
+                class="bi bi-telephone-fill"></i></a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-5">
+                    <h5 class="fw-bold text-info mb-3"><i class="bi bi-snow2 me-2"></i>CoolCare | كول كير</h5>
+                    <p class="small text-light opacity-75">
+                        المركز الهندسي المعتمد لخدمات صيانة التكييف، التبريد، تنكات تبريد الألبان، والأجهزة المنزلية
+                        والتجارية بمحافظتي المنوفية والقاهرة وما حولهما.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">الصفحات</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="index.html"
+                                class="text-light opacity-75 text-decoration-none">الرئيسية</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-light opacity-75 text-decoration-none">كافة
+                                الخدمات</a></li>
+                        <li class="mb-2"><a href="pricing.html" class="text-light opacity-75 text-decoration-none">جدول
+                                الأسعار</a></li>
+                        <li class="mb-2"><a href="coverage.html" class="text-light opacity-75 text-decoration-none">نطاق
+                                التغطية</a></li>
+                        <li class="mb-2"><a href="booking.html" class="text-light opacity-75 text-decoration-none">حجز
+                                موعد</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="fw-bold mb-3">الاتصال السريع</h6>
+                    <p class="small text-light opacity-75 mb-1"><i class="bi bi-headset text-info me-2"></i> كول سنتر:
+                        01112657449</p>
+                    <p class="small text-light opacity-75 mb-1"><i class="bi bi-person-badge text-warning me-2"></i>
+                        الإدارة: 01153116317 / 01022377655</p>
+                    <p class="small text-light opacity-75 mb-0"><i class="bi bi-geo-alt text-danger me-2"></i> كفر شبرا
+                        زنجي، جروان، الباجور، المنوفية</p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center small text-light opacity-50">جميع الحقوق محفوظة &copy; 2026 - CoolCare.</div>
+        </div>
+    </footer>
+
+    <!-- Local Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // كود التعرف التلقائي على الجهاز المحول من صفحة الخدمات عبر الـ URL
+        $(document).ready(function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const deviceParam = urlParams.get('device');
+
+            if (deviceParam) {
+                if (deviceParam.includes('تكييف')) {
+                    $('#cust_device').val('تكييف سبليت منزلي').trigger('change');
+                } else if (deviceParam.includes('لبن')) {
+                    $('#cust_device').val('تانك تبريد ألبان (مزرعة / تجميع)').trigger('change');
+                } else if (deviceParam.includes('ثلاجة')) {
+                    $('#cust_device').val('ثلاجة منزلية (نوفروست/عادية)').trigger('change');
+                } else if (deviceParam.includes('فريزر')) {
+                    $('#cust_device').val('ديب فريزر (أفقي/رأسي)').trigger('change');
+                } else if (deviceParam.includes('كولدير')) {
+                    $('#cust_device').val('ديسبنسر مبرد مياه أو كولدير').trigger('change');
+                } else if (deviceParam.includes('غسالة')) {
+                    $('#cust_device').val('غسالة ملابس أوتوماتيك/فوق أوتوماتيك').trigger('change');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

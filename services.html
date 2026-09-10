@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات الصيانة والتبريد | CoolCare</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .filter-btn {
+            border-radius: 50px;
+            font-weight: 700;
+            padding: 8px 22px;
+            transition: all 0.25s ease;
+            border: 1px solid #cbd5e1;
+            background-color: #ffffff;
+            color: #334155;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--accent-cyan);
+            color: #ffffff;
+            border-color: var(--accent-cyan);
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+        }
+
+        .service-badge {
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar text-white py-2 d-none d-md-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <i class="bi bi-geo-alt-fill text-warning me-1"></i>
+                <span>المركز الرئيسي: شارع بور سعيد، بجوار محطة قطار كفر شبرا زنجي، جروان، مركز الباجور</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <span><i class="bi bi-shield-fill-check text-success me-1"></i> ضمان 6 شهور معتمد</span>
+                <a href="tel:01112657449" class="text-white text-decoration-none"><i
+                        class="bi bi-headset text-info me-1"></i> 01112657449</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                <i class="bi bi-snow2 text-info fs-3"></i>
+                <span>Cool<span class="highlight">Care</span> <small class="fs-6 fw-normal text-light opacity-75">| كول
+                        كير</small></span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">خدماتنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">الأسعار والضمان</a></li>
+                    <li class="nav-item"><a class="nav-link" href="coverage.html">نطاق التغطية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="booking.html">حجز صيانة</a></li>
+                </ul>
+                <a href="tel:01153116317" class="btn btn-warning fw-bold btn-sm px-3 py-2 text-dark rounded-3">
+                    <i class="bi bi-telephone-outbound-fill me-1"></i> الإدارة
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+            <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-bold mb-2">تخصص هندسي
+                شامل</span>
+            <h1 class="fw-bold display-6">خدمات الصيانة، التبريد، والتجهيزات</h1>
+            <p class="text-muted mx-auto mb-4" style="max-width: 650px;">
+                حلول تقنية وجذرية لجميع المشاكل الفنية لأجهزة التبريد والتكييف، تنكات مزارع الألبان، والتبريد التجاري
+                والمنزلي، مدعومة بضمان 6 شهور على الصيانة وقطع الغيار.
+            </p>
+
+            <!-- Category Filter Tabs -->
+            <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="ac">المكيفات</button>
+                <button class="filter-btn" data-filter="milk">تنكات الألبان</button>
+                <button class="filter-btn" data-filter="refrig">الثلاجات والفريزر</button>
+                <button class="filter-btn" data-filter="commercial">التبريد التجاري والكولديرات</button>
+                <button class="filter-btn" data-filter="washing">الغسالات والأجهزة</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4" id="servicesContainer">
+
+                <!-- 1. تكييفات الهواء -->
+                <div class="col-lg-4 col-md-6 service-item" data-category="ac">
+                    <div class="custom-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="icon-wrapper mb-0"><i class="bi bi-snow"></i></div>
+                                <span class="service-badge bg-primary-subtle text-primary">تكييف منزلي وتجاري</span>
+                            </div>
+                            <h5 class="fw-bold">صيانة وغسيل وشحن التكييفات</h5>
+                            <p class="text-muted small">خدمة شاملة للتكييفات السبليت، الكونسيلد، الكاسيت، والشباك لجميع
+                                الماركات العالمية (شارب، كاريير، ميديا، إل جي وغيرها).</p>
+                            <hr>
+                            <ul class="list-unstyled small text-muted">
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> غسيل كيميائي بالمضخات
+                                    والأكياس العازلة لحماية الجدران.</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> علاج تسريب الفريون
+                                    الداخلي والخارجي باللحام الدقيق.</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> شحن فريون أمريكي R22 و
+                                    R410A بميزان الغاز الحساس.</li>
+                                <li class="mb-0"><i class="bi bi-check2 text-success me-1"></i> فك، نقل، وتركيب مع سحب
+                                    الشحنة بالكامل وتمديد النحاس.</li>
+                            </ul>
+                        </div>
+                        <div class="mt-4">
+                            <a href="booking.html?device=تكييف" class="btn btn-outline-primary w-100 fw-bold">حجز معاينة
+                                تكييف</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. تنكات اللبن ومزارع التجميع -->
+                <div class="col-lg-4 col-md-6 service-item" data-category="milk">
+                    <div class="custom-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="icon-wrapper mb-0 text-success bg-success-subtle"><i
+                                        class="bi bi-water"></i></div>
+                                <span class="service-badge bg-success-subtle text-success">قطاع زراعي وصناعي</span>
+                            </div>
+                            <h5 class="fw-bold">تنكات ومبردات الألبان</h5>
+                            <p class="text-muted small">فحص وصيانة غرف ومحطات تجميع الألبان والمزارع لضمان الوصول إلى
+                                درجة حرارة التبريد الآمنة (4 درجات مئوية) في زمن قياسي.</p>
+                            <hr>
+                            <ul class="list-unstyled small text-muted">
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> معالجة بطء التبريد لمنع
+                                    زيادة حموضة الحليب.</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> صيانة مواتير التقليب
+                                    الأوتوماتيكية وسخانات الغسيل.</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> معايرة لوحات التحكم
+                                    الرقمية والحساسات الحرارية.</li>
+                                <li class="mb-0"><i class="bi bi-check2 text-success me-1"></i> شحن وصيانة دورات الفريون
+                                    الصناعي للوحدات الكبيرة.</li>
+                            </ul>
+                        </div>
+                        <div class="mt-4">
+                            <a href="booking.html?device=تانك_لبن" class="btn btn-outline-success w-100 fw-bold">طلب فحص
+                                تانك لبن</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. الثلاجات النوفروست والعادية -->
+                <div class="col-lg-4 col-md-6 service-item" data-category="refrig">
+                    <div class="custom-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="icon-wrapper mb-0"><i class="bi bi-archive"></i></div>
+                                <span class="service-badge bg-info-subtle text-info">أجهزة منزلية</span>
+                            </div>
+                            <h5 class="fw-bold">الثلاجات المنزلية (نوفروست وديفروست)</h5>
+                            <p class="text-muted small">حل المشاكل الكهربائية والميكانيكية لدورات التبريد المنزلية لجميع
+                                الموديلات العادية والإنفرتر.</p>
+                            <hr>
+                            <ul class="list-unstyled small text-muted">
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> علاج تراكم الثلج في
+                                    الفريزر وضعف التبريد في الكابينة السفلية.</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> تغيير السخان،
+                                    الثرموديسك، الثرموفيوز، والمروحة.</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> شحن فريون R134a و R600a
+                                    بعد تغيير الفلتر وتفريغ الفاكيوم.</li>
+                                <li class="mb-0"><i class="bi bi-check2 text-success me-1"></i> صيانة تسريب المياه داخل
+                                    الأدراج وتغيير جوان الباب التالف.</li>
+                            </ul>
+                        </div>
+                        <div class="mt-4">
+                            <a href="booking.html?device=ثلاجة" class="btn btn-outline-primary w-100 fw-bold">حجز صيانة
+                                ثلاجة</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. الديب فريزر (أفقي ورأسي) -->
+                <div class="col-lg-4 col-md-6 service-item" data-category="refrig">
+                    <div class="custom-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="icon-wrapper mb-0 text-primary bg-primary-subtle"><i
+                                        class="bi bi-box-seam"></i></div>
+                                <span class="service-badge bg-primary-subtle text-primary">تجميد عميق</span>
+                            </div>
+                            <h5 class="fw-bold">الديب فريزر (الأفقي والأدراج الرأسي)</h5>
+                            <p class="text-muted small">إصلاح شامل لأنظمة التجميد السريع وعلاج السدد والشحنات الخاطئة في
+                                دورات التبريد المغلقة.</p>
+                            <hr>
+                            <ul class="list-unstyled small text-muted">
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> كبس الشبكة بالنيتروجين
+                                    لكشف ومعالجة التسريب الداخلي.</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> تغيير الموتور (الكباس)
+                                    بآخر أصلي مع ضبط سعة الإزاحة.</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> ضبط وتغيير الثرموستات
+                                    الميكانيكي ولوحات الديجيتال.</li>
+                                <li class="mb-0"><i class="bi bi-check2 text-success me-1"></i> حل مشاكل اللمبة الحمراء
+                                    واستمرار عمل الموتور دون فصل.</li>
+                            </ul>
+                        </div>
+                        <div class="mt-4">
+                            <a href="booking.html?device=ديب_فريزر" class="btn btn-outline-primary w-100 fw-bold">حجز
+                                صيانة ديب فريزر</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. التبريد التجاري والكولديرات -->
+                <div class="col-lg-4 col-md-6 service-item" data-category="commercial">
+                    <div class="custom-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="icon-wrapper mb-0 text-warning bg-warning-subtle"><i class="bi bi-shop"></i>
+                                </div>
+                                <span class="service-badge bg-warning-subtle text-dark">تجاري وعام</span>
+                            </div>
+                            <h5 class="fw-bold">الكولديرات، الديسبنسر وثلاجات العرض</h5>
+                            <p class="text-muted small">تجهيز وصيانة كولديرات السبيل ومبردات المياه المكتبية، إلى جانب
+                                ثلاجات السوبر ماركت والمطاعم.</p>
+                            <hr>
+                            <ul class="list-unstyled small text-muted">
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> صيانة كولديرات الشوارع
+                                    والمدارس والمساجد وتغيير الحنفيات.</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> تطهير وتعقيم خزانات
+                                    مبردات المياه (الديسبنسر) من الأملاح.</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> صيانة ثلاجات البقالة
+                                    واللحوم والأجبان وحل تسريب المبخر.</li>
+                                <li class="mb-0"><i class="bi bi-check2 text-success me-1"></i> صيانة دورات تبريد المياه
+                                    الصناعية وشيلرات التبريد المدمجة.</li>
+                            </ul>
+                        </div>
+                        <div class="mt-4">
+                            <a href="booking.html?device=تجاري_كولدير"
+                                class="btn btn-outline-warning text-dark w-100 fw-bold">طلب فحص تجاري / كولدير</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. غسالات الملابس والأطباق -->
+                <div class="col-lg-4 col-md-6 service-item" data-category="washing">
+                    <div class="custom-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="icon-wrapper mb-0 text-secondary bg-secondary-subtle"><i
+                                        class="bi bi-gear-wide-connected"></i></div>
+                                <span class="service-badge bg-secondary-subtle text-secondary">أجهزة منزلية</span>
+                            </div>
+                            <h5 class="fw-bold">غسالات الملابس والأطباق</h5>
+                            <p class="text-muted small">صيانة متخصصة للغسالات الأوتوماتيك الكاملة، الفوق أوتوماتيك،
+                                وغسالات الأطباق لجميع الموديلات الحديثة.</p>
+                            <hr>
+                            <ul class="list-unstyled small text-muted">
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> تغيير رولمان البلي
+                                    والأولسيه لعلاج الصوت العالي أثناء العصر.</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> تغيير المساعدين والسوست
+                                    لمنع الحركة والاهتزاز الشديد.</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-success me-1"></i> إصلاح وبرمجة الكروت
+                                    الإلكترونية وحل رموز الأعطال (Error Codes).</li>
+                                <li class="mb-0"><i class="bi bi-check2 text-success me-1"></i> تغيير طلمبات الصرف،
+                                    صمامات دخول المياه، وسخانات غسالات الأطباق.</li>
+                            </ul>
+                        </div>
+                        <div class="mt-4">
+                            <a href="booking.html?device=غسالة" class="btn btn-outline-secondary w-100 fw-bold">حجز
+                                صيانة غسالة</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Actions -->
+    <div class="sticky-actions">
+        <a href="https://wa.me/201112657449" target="_blank" class="action-circle-btn btn-wa" title="راسلنا واتساب"><i
+                class="bi bi-whatsapp"></i></a>
+        <a href="tel:01112657449" class="action-circle-btn btn-ph" title="اتصل بنا"><i
+                class="bi bi-telephone-fill"></i></a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-5">
+                    <h5 class="fw-bold text-info mb-3"><i class="bi bi-snow2 me-2"></i>CoolCare | كول كير</h5>
+                    <p class="small text-light opacity-75">
+                        المركز الهندسي المعتمد لخدمات صيانة التكييف، التبريد، تنكات تبريد الألبان، والأجهزة المنزلية
+                        والتجارية بمحافظتي المنوفية والقاهرة وما حولهما.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">الصفحات</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="index.html"
+                                class="text-light opacity-75 text-decoration-none">الرئيسية</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-light opacity-75 text-decoration-none">كافة
+                                الخدمات</a></li>
+                        <li class="mb-2"><a href="pricing.html" class="text-light opacity-75 text-decoration-none">جدول
+                                الأسعار</a></li>
+                        <li class="mb-2"><a href="coverage.html" class="text-light opacity-75 text-decoration-none">نطاق
+                                التغطية</a></li>
+                        <li class="mb-2"><a href="booking.html" class="text-light opacity-75 text-decoration-none">حجز
+                                موعد</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="fw-bold mb-3">الاتصال السريع</h6>
+                    <p class="small text-light opacity-75 mb-1"><i class="bi bi-headset text-info me-2"></i> كول سنتر:
+                        01112657449</p>
+                    <p class="small text-light opacity-75 mb-1"><i class="bi bi-person-badge text-warning me-2"></i>
+                        الإدارة: 01153116317 / 01022377655</p>
+                    <p class="small text-light opacity-75 mb-0"><i class="bi bi-geo-alt text-danger me-2"></i> كفر شبرا
+                        زنجي، جروان، الباجور، المنوفية</p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center small text-light opacity-50">جميع الحقوق محفوظة &copy; 2026 - CoolCare.</div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // دالة تطبيق الفلترة
+            function applyFilter(cat) {
+                if (!cat) return;
+                $('.filter-btn').removeClass('active');
+                $(`.filter-btn[data-filter="${cat}"]`).addClass('active');
+
+                if (cat === 'all') {
+                    $('.service-item').fadeIn(200);
+                } else {
+                    $('.service-item').hide();
+                    $(`.service-item[data-category="${cat}"]`).fadeIn(200);
+                }
+            }
+
+            // ضغط يدوي على أزرار الفلتر
+            $('.filter-btn').on('click', function () {
+                const filter = $(this).data('filter');
+                applyFilter(filter);
+            });
+
+            // قراءة الفلتر من الرابط لو جاي من الصفحة الرئيسية
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+            if (categoryParam) {
+                applyFilter(categoryParam);
+            }
+        });
+    </script>
+</body>
+
+</html>
